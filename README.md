@@ -1,5 +1,6 @@
-# flutter_splitwise
+# Splitwise
 
+# flutter_splitwise
 A new Flutter application.
 
 ## Getting Started
@@ -14,3 +15,15 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+## Backend using Express with GraphQL and Mongoose
+
+### `sudo docker-compose build`
+
+Builds Docker images<br />
+
+### `sudo docker-compose up`
+
+Start all the services defined in a docker-compose.yml<br />
+GraphiQL(GraphQL IDE): http://localhost:4000/graphql<br />
+Admin Mongo Interface: http://localhost:8082/ 
