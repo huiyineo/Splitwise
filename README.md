@@ -27,3 +27,19 @@ Builds Docker images<br />
 Start all the services defined in a docker-compose.yml<br />
 GraphiQL(GraphQL IDE): http://localhost:4000/graphql<br />
 Admin Mongo Interface: http://localhost:8082/ 
+
+## FrontEnd
+
+### iOS on Mac
+To run Simulator on terminal use
+```sh
+open -a Simulator
+```
+To build and run flutter, from project folder use
+```sh
+flutter build
+```
+```sh
+flutter run
+```
+More commands: https://flutter.dev/docs/reference/flutter-cli
