@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import './Friends.dart';
-import './Groups.dart';
-import './Activity.dart';
+import 'friends.dart';
+import 'groups.dart';
+import 'activity.dart';
 
 class MainTabBarView extends TabBarView {
   MainTabBarView()

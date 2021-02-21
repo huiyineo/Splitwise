@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_splitwise/Components/MainTabBarView.dart';
-import './Components/Sidebar.dart';
-import 'Components/MainTabBar.dart';
+import 'package:flutter_splitwise/Components/mainTabBarView.dart';
+import 'Components/sidebar.dart';
+import 'Components/mainTabBar.dart';
 
 void main() {
   runApp(MyApp());
