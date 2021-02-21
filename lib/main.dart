@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_splitwise/Components/mainTabBarView.dart';
+import 'package:flutter_splitwise/Components/main_tab_bar_view.dart';
 import 'Components/sidebar.dart';
-import 'Components/mainTabBar.dart';
+import 'Components/main_tab_bar.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         length: 3,
         child: Scaffold(
           appBar: AppBar(
-            backgroundColor: Colors.lightGreen,
+            backgroundColor: Color.fromRGBO(59, 174, 142, 1),
             title: Text('SplitWise'),
             actions: <Widget>[
               IconButton(icon: const Icon(Icons.search), onPressed: null),
