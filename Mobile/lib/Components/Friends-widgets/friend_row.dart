@@ -16,7 +16,7 @@ class FriendRow extends StatelessWidget {
           SizedBox(
               width: 70,
               child: Icon(
-                Icons.supervised_user_circle_outlined,
+                Icons.account_circle_outlined,
                 color: Color.fromRGBO(59, 174, 142, 1),
                 size: 50,
               )),

@@ -17,7 +17,6 @@ class Friends extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         width: double.infinity,
-        //margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
         child: Column(
           children: <Widget>[
             FriendFilter(),
@@ -36,7 +35,16 @@ class Friends extends StatelessWidget {
                     style: TextStyle(color: Colors.grey[600]))),
             ElevatedButton(
                 onPressed: () {}, child: Text('Show x settled-up friend')),
-            ElevatedButton(onPressed: () {}, child: Text('+ ADD MORE FRIENDS')),
+            Container(
+                margin: EdgeInsets.fromLTRB(20, 0, 20, 0),
+                child: Row(
+                  children: [
+                    Expanded(
+                        child: ElevatedButton(
+                            onPressed: () {},
+                            child: Text('+ ADD MORE FRIENDS')))
+                  ],
+                )),
           ],
         ));
   }

@@ -22,6 +22,7 @@ class MyApp extends StatelessWidget {
             actions: <Widget>[
               IconButton(icon: const Icon(Icons.search), onPressed: null),
               PopupMenuButton(
+                  icon: Icon(Icons.more_vert),
                   itemBuilder: (context) => [
                         PopupMenuItem(
                           child: Text('Add friends on Splitwise'),

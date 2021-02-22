@@ -14,7 +14,7 @@ class FriendFilter extends StatelessWidget {
           children: [
             SizedBox(
                 width: 100,
-                child: Icon(Icons.supervised_user_circle_rounded,
+                child: Icon(Icons.supervised_user_circle_outlined,
                     size: 80, color: Color.fromRGBO(59, 174, 142, 1))),
             Expanded(
                 child: Container(
@@ -41,13 +41,12 @@ class FriendFilter extends StatelessWidget {
                       ],
                     ))),
             SizedBox(
-                width: 40,
+                width: 60,
                 child: Icon(
-                  Icons.list,
+                  Icons.filter_list_rounded,
                   size: 40,
                 ))
           ],
         ));
   }
 }
-/*Column( crossAxisAlignment: CrossAxisAlignment.start, children: <Widget>[ Container( child: Text('${payment.name}',textAlign: TextAlign.left,), color: Colors.redAccent, ), ...... )*/
