@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'friends-widgets/friend_filter.dart';
 import 'friends-widgets/friend_row.dart';
+import 'package:intl/intl.dart';
 
 class Friends extends StatelessWidget {
   final _friends = const [
@@ -21,16 +22,18 @@ class Friends extends StatelessWidget {
           children: <Widget>[
             FriendFilter(),
             ..._friends
-                .map((friend) => FriendRow(friend['name'] as String,
-                    friend['status'] as String, friend['amount'].toString()))
+                .map((friend) => FriendRow(
+                    friend['name'] as String,
+                    friend['status'] as String,
+                    NumberFormat.currency(symbol: 'S\$')
+                        .format(friend['amount'])))
                 .toList(),
             Container(
                 margin: EdgeInsets.fromLTRB(20, 25, 20, 15),
                 child: Text(
-                  'Splitwise hides friends who have been settled up for more than 7 days.',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(color: Colors.grey[600])
-                )),
+                    'Splitwise hides friends who have been settled up for more than 7 days.',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: Colors.grey[600]))),
             ElevatedButton(
                 onPressed: () {}, child: Text('Show x settled-up friend')),
             ElevatedButton(onPressed: () {}, child: Text('+ ADD MORE FRIENDS')),
