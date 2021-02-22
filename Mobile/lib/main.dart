@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
           ),
           floatingActionButton: FloatingActionButton(
             child: Icon(Icons.add),
-            backgroundColor: Colors.lightGreen,
+            backgroundColor: Colors.orange[800],
             onPressed: () {},
           ),
           drawer: Sidebar(),

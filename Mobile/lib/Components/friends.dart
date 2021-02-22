@@ -34,7 +34,16 @@ class Friends extends StatelessWidget {
                     textAlign: TextAlign.center,
                     style: TextStyle(color: Colors.grey[600]))),
             ElevatedButton(
-                onPressed: () {}, child: Text('Show x settled-up friend')),
+                onPressed: () {},
+                child: Text('Show x settled-up friend',
+                    style: TextStyle(
+                        color: Color.fromRGBO(59, 174, 142, 1), fontSize: 12)),
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.white,
+                  onPrimary: Color.fromRGBO(59, 174, 142, 1),
+                  side: BorderSide(color: Color.fromRGBO(59, 174, 142, 1), width: 2)
+                ),
+                ),
             Container(
                 margin: EdgeInsets.fromLTRB(20, 0, 20, 0),
                 child: Row(
@@ -42,7 +51,14 @@ class Friends extends StatelessWidget {
                     Expanded(
                         child: ElevatedButton(
                             onPressed: () {},
-                            child: Text('+ ADD MORE FRIENDS')))
+                            child: Text(
+                              '+ ADD MORE FRIENDS',
+                              style: TextStyle(
+                                  color: Colors.grey[900], fontSize: 12),
+                            ),
+                            style: ElevatedButton.styleFrom(
+                              primary: Colors.grey[200],
+                            )))
                   ],
                 )),
           ],
