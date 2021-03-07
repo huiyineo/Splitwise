@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Splitwise',
+<<<<<<< HEAD
       home: MyHome(),
     );
   }
@@ -53,6 +54,36 @@ class MyHome extends StatelessWidget {
                   builder: (context) => Expense(),
                 ));
           },
+=======
+      home: DefaultTabController(
+        length: 3,
+        child: Scaffold(
+          appBar: AppBar(
+            backgroundColor: Color.fromRGBO(91, 197, 167, 1),
+            title: Text('SplitWise'),
+            actions: <Widget>[
+              IconButton(icon: const Icon(Icons.search), onPressed: null),
+              PopupMenuButton(
+                  icon: Icon(Icons.more_vert),
+                  itemBuilder: (context) => [
+                        PopupMenuItem(
+                          child: Text('Add friends on Splitwise'),
+                        ),
+                        PopupMenuItem(
+                          child: Text('Create a group'),
+                        ),
+                      ]),
+            ],
+            bottom: MainTabBar(),
+          ),
+          floatingActionButton: FloatingActionButton(
+            child: Icon(Icons.add),
+            backgroundColor: Colors.orange[800],
+            onPressed: () {},
+          ),
+          drawer: Sidebar(),
+          body: MainTabBarView(),
+>>>>>>> 1ccf5191394b752d91ce8203ce312b0ce745def3
         ),
         drawer: Sidebar(),
         body: MainTabBarView(),

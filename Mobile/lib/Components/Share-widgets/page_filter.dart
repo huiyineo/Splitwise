@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class FriendFilter extends StatelessWidget {
+class PageFilter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -15,7 +15,7 @@ class FriendFilter extends StatelessWidget {
             SizedBox(
                 width: 100,
                 child: Icon(Icons.supervised_user_circle_outlined,
-                    size: 80, color: Color.fromRGBO(59, 174, 142, 1))),
+                    size: 80, color: Color.fromRGBO(91, 197, 167, 1))),
             Expanded(
                 child: Container(
                     width: double.infinity,
@@ -35,9 +35,14 @@ class FriendFilter extends StatelessWidget {
                             )),
                         Container(
                             alignment: Alignment.centerLeft,
+                            child: Text('you owe \$12345',
+                                style: TextStyle(
+                                    color: Color.fromRGBO(255, 101, 47, 1)))),
+                        Container(
+                            alignment: Alignment.centerLeft,
                             child: Text('you are owned \$12345',
                                 style: TextStyle(
-                                    color: Color.fromRGBO(59, 174, 142, 1)))),
+                                    color: Color.fromRGBO(91, 197, 167, 1)))),
                       ],
                     ))),
             SizedBox(

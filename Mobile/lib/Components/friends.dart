@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'friends-widgets/friend_filter.dart';
+import 'share-widgets/page_filter.dart';
 import 'friends-widgets/friend_row.dart';
 import 'package:intl/intl.dart';
 
 class Friends extends StatelessWidget {
   final _friends = const [
     {'name': 'huiyi.neo', 'status': 'owes you', 'amount': 12000.00},
-    {'name': 'kaythi', 'status': 'you owes', 'amount': 999.99},
+    {'name': 'kaythi', 'status': 'you owe', 'amount': 999.99},
     {'name': 'sowndar', 'status': 'owes you', 'amount': 212.00},
     {'name': 'lanxin', 'status': 'settled up', 'amount': 0},
     {'name': 'annie', 'status': 'owes you', 'amount': 12000.12},
-    {'name': 'hailling', 'status': 'you owes', 'amount': 999.99},
+    {'name': 'hailling', 'status': 'you owe', 'amount': 999.99},
   ];
 
   @override
@@ -19,7 +19,7 @@ class Friends extends StatelessWidget {
         width: double.infinity,
         child: Column(
           children: <Widget>[
-            FriendFilter(),
+            PageFilter(),
             ..._friends
                 .map((friend) => FriendRow(
                     friend['name'] as String,
@@ -37,11 +37,11 @@ class Friends extends StatelessWidget {
                 onPressed: () {},
                 child: Text('Show x settled-up friend',
                     style: TextStyle(
-                        color: Color.fromRGBO(59, 174, 142, 1), fontSize: 12)),
+                        color: Color.fromRGBO(91, 197, 167, 1), fontSize: 12)),
                 style: ElevatedButton.styleFrom(
                   primary: Colors.white,
-                  onPrimary: Color.fromRGBO(59, 174, 142, 1),
-                  side: BorderSide(color: Color.fromRGBO(59, 174, 142, 1), width: 2)
+                  onPrimary: Color.fromRGBO(91, 197, 167, 1),
+                  side: BorderSide(color: Color.fromRGBO(91, 197, 167, 1), width: 2)
                 ),
                 ),
             Container(
