@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 
 class FriendRow extends StatelessWidget {
@@ -7,6 +5,21 @@ class FriendRow extends StatelessWidget {
   final String status;
   final String amount;
   FriendRow(this.name, this.status, this.amount);
+
+  colorByStatus(status) {
+    switch (status) {
+      case 'you owe':
+        return Color.fromRGBO(255, 101, 47, 1);
+      case 'settled up':
+        return Color.fromRGBO(170, 170, 170, 1);
+      default:
+        return Color.fromRGBO(91, 197, 167, 1);
+    }
+  }
+
+  isSettled(status) {
+    return status == 'settled up';
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +30,7 @@ class FriendRow extends StatelessWidget {
               width: 70,
               child: Icon(
                 Icons.account_circle_outlined,
-                color: Color.fromRGBO(59, 174, 142, 1),
+                color: Color.fromRGBO(91, 197, 167, 1),
                 size: 50,
               )),
           Expanded(
@@ -37,14 +50,13 @@ class FriendRow extends StatelessWidget {
                     alignment: Alignment.centerRight,
                     child: Text(this.status,
                         style: TextStyle(
-                            color: Color.fromRGBO(59, 174, 142, 1),
-                            fontSize: 11))),
-                Container(
-                    alignment: Alignment.centerRight,
-                    child: Text(this.amount,
-                        style: TextStyle(
-                            color: Color.fromRGBO(59, 174, 142, 1),
-                            fontSize: 16)))
+                            color: colorByStatus(this.status), fontSize: 11))),
+                if (!isSettled(this.status))
+                  Container(
+                      alignment: Alignment.centerRight,
+                      child: Text(this.amount,
+                          style: TextStyle(
+                              color: colorByStatus(this.status), fontSize: 16)))
               ],
             ),
           )

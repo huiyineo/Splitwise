@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         length: 3,
         child: Scaffold(
           appBar: AppBar(
-            backgroundColor: Color.fromRGBO(59, 174, 142, 1),
+            backgroundColor: Color.fromRGBO(91, 197, 167, 1),
             title: Text('SplitWise'),
             actions: <Widget>[
               IconButton(icon: const Icon(Icons.search), onPressed: null),
