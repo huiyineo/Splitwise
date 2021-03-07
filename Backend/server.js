@@ -2,7 +2,8 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const { graphqlHTTP } = require("express-graphql");
-const userSchema = require("./src/graphql/UserSchema").UserSchema;
+// const userSchema = require("./src/graphql/UserSchema").UserSchema;
+const schema = require("./src/schema").schema;
 
 mongoose.set("useUnifiedTopology", true);
 mongoose.set("useFindAndModify", true);
@@ -20,7 +21,7 @@ app.listen(app.get("port"), () => {
 app.use(
   "/graphql",
   graphqlHTTP({
-    schema: userSchema,
+    schema: schema,
     rootValue: global,
     graphiql: true,
   })

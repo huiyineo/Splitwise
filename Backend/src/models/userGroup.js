@@ -2,30 +2,26 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 var { composeWithMongoose } = require("graphql-compose-mongoose");
 
-const UserSchema = new Schema(
+const UserGroupSchema = new Schema(
   {
-    name: {
+    UserId: {
       type: String,
-      trim: true,
       required: true,
     },
-    email: {
+    GroupId: {
       type: String,
-      lowercase: true,
-      trim: true,
-      unique: true,
       required: true,
     },
   },
   {
-    collection: "users",
+    collection: "userGroups",
   }
 );
 
-const User = mongoose.model("User", UserSchema);
-const UserTC = composeWithMongoose(User);
+const UserGroup = mongoose.model("UserGroup", UserGroupSchema);
+const UserGroupTC = composeWithMongoose(UserGroup);
 
 module.exports = {
-  User,
-  UserTC,
+  UserGroup,
+  UserGroupTC,
 };
